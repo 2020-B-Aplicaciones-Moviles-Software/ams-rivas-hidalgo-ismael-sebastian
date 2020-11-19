@@ -1,1 +1,2 @@
-Implementar division
+Implementar Division
+Implementar division para cero
