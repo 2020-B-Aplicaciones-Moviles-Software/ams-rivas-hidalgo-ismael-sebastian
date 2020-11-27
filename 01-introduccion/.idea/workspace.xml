@@ -50,17 +50,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="01-introduccion" />
       <option name="VM_PARAMETERS" />
@@ -91,7 +80,8 @@
       <workItem from="1606324678350" duration="661000" />
       <workItem from="1606338995643" duration="5253000" />
       <workItem from="1606355469392" duration="2689000" />
-      <workItem from="1606424698786" duration="5577000" />
+      <workItem from="1606424698786" duration="6178000" />
+      <workItem from="1606511456814" duration="1204000" />
     </task>
     <servers />
   </component>
@@ -115,21 +105,21 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1606324867152" />
-    <state width="692" height="215" key="GridCell.Tab.0.bottom" timestamp="1606430548293">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1606431511953">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="692" height="215" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606430548293" />
-    <state width="692" height="215" key="GridCell.Tab.0.center" timestamp="1606430548293">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606431511953" />
+    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1606431511953">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="692" height="215" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606430548293" />
-    <state width="692" height="215" key="GridCell.Tab.0.left" timestamp="1606430548293">
+    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606431511953" />
+    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1606431511953">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="692" height="215" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606430548293" />
-    <state width="692" height="215" key="GridCell.Tab.0.right" timestamp="1606430548293">
+    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606431511953" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1606431511953">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="692" height="215" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606430548293" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606431511953" />
   </component>
 </project>
