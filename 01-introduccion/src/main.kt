@@ -229,7 +229,8 @@ abstract class NumerosJava{
 }
 
 abstract class Numeros(
-        protected var numeroUno: Int, //cuando escribo código aquí, esto ya se convierte en propiedades de la clase
+        protected var numeroUno: Int, //cuando escribo código aquí
+                                      //esto ya se convierte en propiedades de la clase
         protected var numeroDos: Int
 ) {
     init{
