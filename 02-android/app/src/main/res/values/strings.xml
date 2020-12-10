@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">AplicacionMovil_Software</string>
     <string name="saludo">Saludos</string>
+    <string-array name="string_array_opciones_dialogo">
+        <item> opcion 1</item>
+        <item> opcion 2</item>
+        <item> opcion 3</item>
+
+    </string-array>
 </resources>
