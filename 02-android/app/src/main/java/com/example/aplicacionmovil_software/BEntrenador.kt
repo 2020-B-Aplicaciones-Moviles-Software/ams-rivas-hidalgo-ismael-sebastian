@@ -1,20 +1,11 @@
 package com.example.aplicacionmovil_software
 
-class BEntrenador {
+class BEntrenador (nombre: String, descripcion: String) {
 
-    //propiedad Nombre public String
-    //propiedad Descripción public String
-
-    var nombre: String
-    var descripción: String
-
-    constructor(nombre: String, descripción: String) {
-        this.nombre = nombre
-        this.descripción = descripción
-    }
+    var nombre: String = nombre
+    var descripción: String = descripcion
 
     override fun toString(): String {
         return "${nombre} ${descripción}"
-        
     }
 }
