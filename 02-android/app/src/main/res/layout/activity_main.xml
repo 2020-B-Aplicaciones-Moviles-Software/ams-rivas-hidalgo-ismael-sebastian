@@ -7,6 +7,17 @@
     android:background="@color/bgcolor"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_ir_intent_explicito_parametros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:text="Param Intent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_ciclo_vida"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_ciclo_vida"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_ciclo_vida" />
+
     <TextView
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
