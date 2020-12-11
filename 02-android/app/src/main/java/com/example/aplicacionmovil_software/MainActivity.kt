@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        BBaseDeDatos.inicializarEntrenadores()
+        //BBaseDeDatos.inicializarEntrenadores()
 
         val botonCicloVida = findViewById<Button>(R.id.btn_ir_ciclo_vida)
         botonCicloVida
@@ -28,12 +28,28 @@ class MainActivity : AppCompatActivity() {
         val botonIrIntentExplicitoParametros = findViewById<Button>(R.id.btn_ir_intent_explicito_parametros)
         botonIrIntentExplicitoParametros
             .setOnClickListener{
-                val parametros = arrayListOf<Pair<String, *>>(
+                val intentExplicito = Intent(
+                        this,
+                        CIntentExplicitoParametros::class.java
+                )
+                intentExplicito.putExtra("nombre", "Ismael")
+                intentExplicito.putExtra("apellido", "Rivas")
+                intentExplicito.putExtra("edad", 31)
+
+                val ligaPokemon = DLiga("Liga Kanto", "Kanto")
+                val ash = BEntrenador("Ash", "Pueblo Paleta", ligaPokemon)
+
+                intentExplicito.putExtra("entrenador", ash)
+
+                startActivityForResult(intentExplicito, 102)
+
+                /*val parametros = arrayListOf<Pair<String, *>>(
                     Pair("nombre", "Ismael"),
                     Pair("apellido", "Rivas"),
                     Pair("edad", 22)
                 )
                 irAActividad(CIntentExplicitoParametros::class.java, parametros, 102)
+                 */
             }
     }
 
