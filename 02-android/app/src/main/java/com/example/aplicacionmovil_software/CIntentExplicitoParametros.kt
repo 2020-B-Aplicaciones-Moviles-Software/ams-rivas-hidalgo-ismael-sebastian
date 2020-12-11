@@ -16,6 +16,14 @@ class CIntentExplicitoParametros : AppCompatActivity() {
         val apellido = intent.getStringExtra("apellido")
         val edad = intent.getIntExtra("edad", 0)
 
+        val entrenador = intent.getParcelableExtra<BEntrenador>("entrenador")
+
+        Log.i("intent-explicito", "${entrenador?.nombre}" +
+                "\"${entrenador?.descripcion}\""+
+                "\"${entrenador?.liga!!.nombre}\""+
+                "\"${entrenador?.liga!!.descripcion}\""
+        )
+
         if(nombre != null && apellido != null && edad != 0){
             Log.i(
                 "intent-explicito", "Nombre: ${nombre + " " + apellido} " + "Edad: ${edad}"

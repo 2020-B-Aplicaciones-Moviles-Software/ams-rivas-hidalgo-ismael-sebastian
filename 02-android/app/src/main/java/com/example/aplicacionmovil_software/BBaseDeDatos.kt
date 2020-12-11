@@ -6,12 +6,13 @@ class BBaseDeDatos {
         val arregloEnteros = arrayListOf<Int>()
         val arregloEntrenadores = arrayListOf<BEntrenador>()
 
+        /*
         fun inicializarEntrenadores() {
             arregloEntrenadores.add(BEntrenador("Juan", "Tecnico"))
             arregloEntrenadores.add(BEntrenador("Carlos", "Entrenador de arqueros"))
             arregloEntrenadores.add(BEntrenador("Pedro", "Entrenador físico"))
         }
-
+    */
         fun inicializarArreglo() {
             arregloEnteros.add(1)
             arregloEnteros.add(2)
