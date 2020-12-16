@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +53,44 @@ class MainActivity : AppCompatActivity() {
                 irAActividad(CIntentExplicitoParametros::class.java, parametros, 102)
                  */
             }
-    }
+
+        EBaseDeDatos.TablaUsuario = ESqliteHelperUsuario(this)
+        if(EBaseDeDatos.TablaUsuario != null){
+            val usuarioEncontrado = EBaseDeDatos.TablaUsuario?.consultarUsuarioPorId(1)
+
+            Log.i(
+                    "bdd", "ID: ${usuarioEncontrado?.id} Nombre: ${usuarioEncontrado?.nombre}" +
+                    "Descripcion: ${usuarioEncontrado?.descripcion}"
+            )
+
+            if(usuarioEncontrado?.id == 0){
+                val resultadoCrear = EBaseDeDatos.TablaUsuario
+                        ?.crearUsuarioFormulario("Ismael", "Estudiante")
+                if(resultadoCrear!= null){
+                    if(resultadoCrear){
+                        Log.i("bdd", "Se crea correctamente")
+                    } else {
+                        Log.i("bdd", "hubo errores")
+                    }
+                }
+            } else {
+                val resultadoActualizar = EBaseDeDatos.TablaUsuario
+                        ?.actualizarUsuarioFormulario(
+                                "Sebastián",
+                                Date().time.toString(),
+                                1
+                        )
+                if(resultadoActualizar != null) {
+                    if(resultadoActualizar) {
+                        Log.i("bdd", "Se actualizo")
+                    }else{
+                        Log.i("bdd", "Errores")
+                    }
+                }
+            }
+        }
+
+    } // fin onCreate
 
     fun irAActividad(
         clase: Class<*>,
