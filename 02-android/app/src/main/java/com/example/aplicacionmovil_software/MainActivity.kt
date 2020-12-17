@@ -90,6 +90,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val botonIrIntentConRespuesta = findViewById<Button>(
+            R.id.btn_ir_intent_con_respuesta
+        )
+        botonIrIntentConRespuesta
+            .setOnClickListener{
+                irAActividad(
+                    FIntentConRespuesta::class.java
+                )
+            }
+
     } // fin onCreate
 
     fun irAActividad(
