@@ -5,11 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 
 class FRecyclerViewAdaptadorNombreCedula(
     private val listaEntrenador: List<BEntrenador>,
-    private val contexto: Class<*>,
-    private val recyvlerView: androidx.recyclerview.widget.RecyclerView
+    private val contexto: GRecyclerView,
+    private val recyclerView: androidx.recyclerview.widget.RecyclerView
 ) : androidx.recyclerview.widget.RecyclerView.Adapter<
         FRecyclerViewAdaptadorNombreCedula.MyViewHolder>() {
 
@@ -27,12 +28,16 @@ class FRecyclerViewAdaptadorNombreCedula(
             nombreTextView = view.findViewById(R.id.tv_nombre)
             cedulaTextView = view.findViewById(R.id.tv_cedula)
             accionButton = view.findViewById(R.id.btn_dar_like)
-            likesTextView = view.findViewById(R.id.tv_nombre)
+            likesTextView = view.findViewById(R.id.tv_likes)
+            accionButton.setOnClickListener{
+                this.anadirLike()
+            }
         }
 
         fun anadirLike() {
             this.numeroLikes = this.numeroLikes + 1
             likesTextView.text = this.numeroLikes.toString()
+            contexto.anadirLikesTotal()
         }
     }
 
@@ -53,7 +58,7 @@ class FRecyclerViewAdaptadorNombreCedula(
     }
 
     override fun onBindViewHolder(
-        holder: MyViewHolder,
+        holder: FRecyclerViewAdaptadorNombreCedula.MyViewHolder,
         position: Int
     ) {
         val entrenador = listaEntrenador[position]
