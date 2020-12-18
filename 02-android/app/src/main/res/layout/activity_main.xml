@@ -22,7 +22,7 @@
         android:id="@+id/btn_ir_intent_con_respuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="268dp"
         android:text="1. Respuesta"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_ciclo_vida"
         app:layout_constraintHorizontal_bias="0.3"
@@ -58,6 +58,17 @@
         android:text="List View"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_ciclo_vida"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_ciclo_vida"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_ciclo_vida" />
+
+    <Button
+        android:id="@+id/btn_ir_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:text="R. View"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_ciclo_vida"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_ciclo_vida"
         app:layout_constraintTop_toBottomOf="@+id/btn_ir_ciclo_vida" />
 </androidx.constraintlayout.widget.ConstraintLayout>
