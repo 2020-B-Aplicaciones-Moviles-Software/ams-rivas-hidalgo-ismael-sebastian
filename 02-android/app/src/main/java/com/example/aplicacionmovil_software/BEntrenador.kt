@@ -6,8 +6,8 @@ import android.os.Parcelable
 //PARCELABLE
 
 class BEntrenador (
-        public var nombre: String?,
-        public var descripcion: String?,
+        var nombre: String?,
+        var descripcion: String?,
         val liga: DLiga?
 
 ) : Parcelable {

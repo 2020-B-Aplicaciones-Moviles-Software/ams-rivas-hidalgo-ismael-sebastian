@@ -111,6 +111,16 @@ class MainActivity : AppCompatActivity() {
                 )
             }
 
+        val botonIrHttp = findViewById<Button>(
+            R.id.btn_ir_http
+        )
+        botonIrHttp
+            .setOnClickListener{
+                irAActividad(
+                    HHttpActivity::class.java
+                )
+            }
+
     } // fin onCreate
 
     fun irAActividad(
