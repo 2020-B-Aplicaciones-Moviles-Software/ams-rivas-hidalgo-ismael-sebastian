@@ -28,7 +28,5 @@ class BBaseDeDatos {
         fun anadirItemAlArreglo(item: BEntrenador){
             arregloEntrenadores.add(item)
         }
-
-
     }
 }
