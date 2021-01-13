@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Examen01</string>
+    <string name="nombre">Nombre</string>
+    <string name="fechaOri">Fecha de Origen:</string>
+    <string name="numeroSubG">Número de subgéneros:</string>
+    <string name="gananciasG">Ganancias del género:</string>
+    <string name="fechaG">fecha</string>
+    <string name="tvSubgeneros">0</string>
+    <string name="tvGananciasG">$0.00</string>
+    <string name="tvGeneroAct">Activo</string>
+    <string name="etNombreG">Nombre del Género</string>
+    <string name="etFechaG">Fec. Origen (dd-MM-yyyy)</string>
+    <string name="etNumSubgeneros">Números de subgéneros</string>
+    <string name="etGananciasG">Ganancias</string>
+    <string name="etGeneroAct">Activo</string>
+    <string name="btGuardarG">Guardar</string>
+    <string name="itemGNombre">Nombre</string>
+    <string name="itemGActivo">Activo</string>
+    <string name="itemGGanancias">$0.00</string>
+    <string name="etNombreP">Nombre de la película</string>
+    <string name="etFechaP">Fec. Estreno (dd-MM-yyyy)</string>
+    <string name="etGananciasP">Ganancias de la película</string>
+    <string name="etCarteleraP">En Cartelera</string>
+    <string name="btGuardarP">Guardar</string>
+    <string name="itemPNombre">Nombre de la película</string>
+    <string name="itemPFecha">Fecha</string>
+    <string name="itemPCartelera">enCartelera</string>
+    <string name="nombreP">Nombre</string>
+    <string name="fechaEstP">Fecha de estreno:</string>
+    <string name="gananciasP">Ganancias de la película:</string>
+    <string name="tvFechaP">Fecha</string>
+    <string name="tvGananciasP">$0.00</string>
+    <string name="tvCarteleraP">enCartelera</string>
+    <string name="tvGeneroP">Género</string>
+</resources>
