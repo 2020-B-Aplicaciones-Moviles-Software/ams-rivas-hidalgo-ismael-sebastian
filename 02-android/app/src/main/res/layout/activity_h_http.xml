@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".HHttpActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="192dp"
+        android:text="Http Activity"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
