@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Crear_EditarPeliculaActivity">
+
+    <EditText
+        android:id="@+id/et_nombre_pelicula"
+        android:layout_width="343dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="@string/etNombreP"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <EditText
+        android:id="@+id/et_fecha_pelicula"
+        android:layout_width="218dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/etFechaP"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/et_nombre_pelicula"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/et_nombre_pelicula"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre_pelicula" />
+
+    <EditText
+        android:id="@+id/et_ganancias_pelicula"
+        android:layout_width="224dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="@string/etGananciasP"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/et_fecha_pelicula"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_fecha_pelicula"
+        app:layout_constraintTop_toBottomOf="@+id/et_fecha_pelicula" />
+
+    <Switch
+        android:id="@+id/sw_enCartelera"
+        android:layout_width="136dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="48dp"
+        android:checked="false"
+        android:showText="false"
+        android:text="@string/etCarteleraP"
+        app:layout_constraintEnd_toEndOf="@+id/et_ganancias_pelicula"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="@+id/et_ganancias_pelicula"
+        app:layout_constraintTop_toBottomOf="@+id/et_ganancias_pelicula"
+        tools:checked="true" />
+
+    <Button
+        android:id="@+id/btn_save_pelicula"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="312dp"
+        android:text="@string/btGuardarP"
+        app:layout_constraintEnd_toEndOf="@+id/et_nombre_pelicula"
+        app:layout_constraintStart_toStartOf="@+id/et_nombre_pelicula"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre_pelicula" />
+</androidx.constraintlayout.widget.ConstraintLayout>

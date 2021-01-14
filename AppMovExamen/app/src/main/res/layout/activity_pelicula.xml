@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PeliculaActivity">
+
+    <TextView
+        android:id="@+id/tv_nombre_peliculaActivity"
+        android:layout_width="378dp"
+        android:layout_height="40dp"
+        android:text="@string/nombreP"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/textview_fecha"
+        android:layout_width="154dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/fechaEstP"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombre_peliculaActivity"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_peliculaActivity" />
+
+    <TextView
+        android:id="@+id/tv_fechaEstreno_peliculaActivity"
+        android:layout_width="142dp"
+        android:layout_height="32dp"
+        android:text="@string/tvFechaP"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_fecha"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre_peliculaActivity"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textview_fecha"
+        app:layout_constraintTop_toTopOf="@+id/textview_fecha"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="141dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/etGananciasP"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textview_fecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textview_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/textview_fecha" />
+
+    <TextView
+        android:id="@+id/tv_ganancias_peliculaActivity"
+        android:layout_width="138dp"
+        android:layout_height="31dp"
+        android:text="@string/tvGananciasP"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/tv_fechaEstreno_peliculaActivity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_fechaEstreno_peliculaActivity"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <TextView
+        android:id="@+id/tv_enCartelera_peliculaActivity"
+        android:layout_width="146dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvCarteleraP"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre_peliculaActivity"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_peliculaActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
