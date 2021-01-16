@@ -1,0 +1,8 @@
+Mockup:
+https://www.figma.com/proto/uDDj26xAyj38GLbGUYbmTc/Mockup-Ismael-Rivas-H-AppMoviles?node-id=56%3A675&scaling=scale-down
+
+Modelo de Base de datos:
+https://lucid.app/lucidchart/invitations/accept/123aa099-47c9-43d3-9c12-8594fcb382e3
+
+Historias de Usuario:
+https://trello.com/invite/b/dzKPQMFm/f6134af6cfbf47eee3fb45176a1f630b/proyecto-appmoviles
