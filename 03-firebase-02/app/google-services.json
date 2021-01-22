@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "974271014389",
+    "project_id": "moviles-2020b-software-rhis",
+    "storage_bucket": "moviles-2020b-software-rhis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974271014389:android:5d854ad9e920d5e7cb6cbc",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974271014389-kmr29easls59rgn17tfkaehtkkg8bjio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAjJq6sdFsgqjE1k4qZtVv_zYlmmjyPtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974271014389-kmr29easls59rgn17tfkaehtkkg8bjio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974271014389:android:10bef60e97c39b80cb6cbc",
+        "android_client_info": {
+          "package_name": "com.example.firebaseayuda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974271014389-kmr29easls59rgn17tfkaehtkkg8bjio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAjJq6sdFsgqjE1k4qZtVv_zYlmmjyPtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974271014389-kmr29easls59rgn17tfkaehtkkg8bjio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
