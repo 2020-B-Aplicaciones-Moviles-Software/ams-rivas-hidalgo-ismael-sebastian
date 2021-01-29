@@ -27,4 +27,15 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_producto"
         app:layout_constraintTop_toBottomOf="@+id/btn_ir_producto" />
+
+    <Button
+        android:id="@+id/btn_ir_ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:text="Ordenes"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_producto"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_producto"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_producto" />
 </androidx.constraintlayout.widget.ConstraintLayout>
