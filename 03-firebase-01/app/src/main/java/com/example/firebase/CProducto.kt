@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class CProducto : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,5 +30,13 @@ class CProducto : AppCompatActivity() {
             "precio" to editTextPrecio.text.toString().toDouble()
         )
         Log.i("firebase-firestore", "$nuevoProducto")
+
+        val db = Firebase.firestore
+        val referencia = db.collection("producto")
+                .document()
+        referencia
+                .set(nuevoProducto)
+                .addOnSuccessListener {}
+                .addOnFailureListener {}
     }
 }

@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".CRestaurante">
 
+    <EditText
+        android:id="@+id/et_nombre_restaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Restaurante"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_crear_restaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Crear"
+        app:layout_constraintStart_toEndOf="@+id/et_nombre_restaurante"
+        app:layout_constraintTop_toTopOf="@+id/et_nombre_restaurante" />
 </androidx.constraintlayout.widget.ConstraintLayout>
