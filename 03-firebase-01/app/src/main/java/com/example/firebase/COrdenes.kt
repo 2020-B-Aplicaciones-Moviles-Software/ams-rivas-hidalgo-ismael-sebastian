@@ -8,6 +8,7 @@ import android.widget.*
 import com.example.firebase.dto.FirestoreRestaurantesDto
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
@@ -50,6 +51,138 @@ class COrdenes : AppCompatActivity() {
             .setOnClickListener {
                 crearOrden()
             }
+
+        buscarOrdenes()
+
+    }
+
+    fun buscarOrdenes(){
+        val db = Firebase.firestore
+        val referencia = db.collection("orden")
+/*
+        referencia
+                .whereEqualTo("review", 3)
+                .get()
+                .addOnSuccessListener {
+                    for(orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+*/
+        //buscar por dos campos ==
+        /*referencia
+                .whereEqualTo("review", 3)
+                .whereEqualTo("restaurante.nombre", "Tripas de la Floresta")
+                .get()
+                .addOnSuccessListener {
+                    for(orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+
+         */
+
+        //Buscar por dos o más elementos campo == array-contains
+        /*
+        referencia
+                .whereEqualTo("restaurante.nombre", "Tripas de la Floresta")
+                .whereArrayContains("tiposComida", "chancrosa")
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+
+
+         */
+        //Buscar por dos o más elementos campo '==' '>='
+        /*
+        referencia
+                .whereEqualTo("restaurante.nombre", "Tripas de la Floresta")
+                .whereGreaterThanOrEqualTo("review", 3)
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+        */
+
+        //Buscar por dos o más elementos campo '==' '>='
+        /*
+        referencia
+                .whereEqualTo("restaurante.nombre", "Tripas de la Floresta")
+                //.whereGreaterThanOrEqualTo("review", 2)
+                .whereEqualTo("usuario", "b@b.com")
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+
+         */
+
+        //Buscar por dos o más elementos campo '==' '>=' ordenar descendente los nombres
+        /*
+        referencia
+                .whereEqualTo("restaurante.nombre", "Tripas de la Floresta")
+                .whereGreaterThanOrEqualTo("review", 2)
+                .orderBy("review", Query.Direction.DESCENDING)  //Enviar la búsqueda NO IGUAL primero
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+         */
+        //Buscar por dos o más elementos campo '==' '>=' ordenar descendente los nombres
+        /*
+        referencia
+                .whereEqualTo("restaurante.nombre", "Tifozzi")
+                .whereArrayContainsAny("tiposComida", arrayListOf("Italiana", "Ecuatoriana"))
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+        */
+        //WHERE IN
+        referencia
+                .whereIn("restaurante.nombre", arrayListOf("Tifozzi", "Tripas de la Floresta", "pepito"))
+                .whereGreaterThanOrEqualTo("review", 1)
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
     }
 
     fun cargarRestaurantes(){
