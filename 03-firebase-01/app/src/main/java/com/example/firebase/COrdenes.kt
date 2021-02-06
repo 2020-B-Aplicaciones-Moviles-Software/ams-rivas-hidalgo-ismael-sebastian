@@ -9,6 +9,7 @@ import com.example.firebase.dto.FirestoreRestaurantesDto
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.QueryDocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
@@ -53,7 +54,7 @@ class COrdenes : AppCompatActivity() {
             }
 
         buscarOrdenes()
-
+        //popularDatos()
     }
 
     fun buscarOrdenes(){
@@ -171,6 +172,7 @@ class COrdenes : AppCompatActivity() {
                 }
         */
         //WHERE IN
+        /*
         referencia
                 .whereIn("restaurante.nombre", arrayListOf("Tifozzi", "Tripas de la Floresta", "pepito"))
                 .whereGreaterThanOrEqualTo("review", 1)
@@ -183,6 +185,69 @@ class COrdenes : AppCompatActivity() {
                 .addOnFailureListener {
                     Log.i("firebase-consultas", "Error")
                 }
+         */
+
+        /*
+        val referenciaCiudad = db.collection("cities")
+        val referenciaLandBJ = referenciaCiudad.document("BJ").collection("landmark")
+
+        referenciaLandBJ
+                .whereEqualTo("landmarkType", "park")
+                .get()
+                .addOnSuccessListener {
+                    for(ciudad in it) {
+                        Log.i("firebase-consultas", "${ciudad.id} ${ciudad.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+
+        */
+        //Todos los landmarks de tipo park
+        /*
+        val referenciaLandmark = db.collectionGroup("landmark")
+        referenciaLandmark
+                .whereEqualTo("landmarkType", "park")
+                .get()
+                .addOnSuccessListener {
+                    for(city in it) {
+                        Log.i("firebase-consultas", "${city.data}")
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-firestore", "${it}")
+                }
+         */
+        referencia
+                .limit(2)
+                .get()
+                .addOnSuccessListener {
+                    for (orden in it) {
+                        Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                    }
+                    val ultimoRegistro: QueryDocumentSnapshot = it.last()
+
+                    referencia
+                            .limit(2)
+                            .startAfter(ultimoRegistro)
+                            .get().addOnSuccessListener {
+                                for (orden in it) {
+                                    Log.i("firebase-consultas", "${orden.id} ${orden.data}")
+                                }
+                            }
+                            .addOnFailureListener {
+                                Log.i("firebase-consultas", "Error")
+                            }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-consultas", "Error")
+                }
+
+        // Crear una actividad
+        // List View para mostrar las ordenes
+        // Boton para cargar mas registros
+
     }
 
     fun cargarRestaurantes(){
@@ -260,5 +325,45 @@ class COrdenes : AppCompatActivity() {
                 .addOnSuccessListener {  }
                 .addOnFailureListener {  }
         }
+    }
+
+    fun popularDatos(){
+
+        val db = Firebase.firestore
+
+        val cities = db.collection("cities")
+        /*
+        val data1 = hashMapOf("name" to "San Francisco","state" to "CA","country" to "USA","capital" to false,"population" to 860000,"regions" to listOf("west_coast", "norcal"))
+        cities.document("SF").set(data1)
+        val data2 = hashMapOf("name" to "Los Angeles","state" to "CA","country" to "USA","capital" to false,"population" to 3900000,"regions" to listOf("west_coast", "socal"))
+        cities.document("LA").set(data2)
+        val data3 = hashMapOf("name" to "Washington D.C.","state" to null,"country" to "USA","capital" to true,"population" to 680000,"regions" to listOf("east_coast"))
+        cities.document("DC").set(data3)
+        val data4 = hashMapOf("name" to "Tokyo","state" to null,"country" to "Japan","capital" to true,"population" to 9000000,"regions" to listOf("kanto", "honshu"))
+        cities.document("TOK").set(data4)
+        val data5 = hashMapOf("name" to "Beijing","state" to null,"country" to "China","capital" to true,"population" to 21500000,"regions" to listOf("jingjinji", "hebei"))
+        cities.document("BJ").set(data5)
+        */
+        val landmark1 = hashMapOf("landmarkType" to "park", "name" to "parque1")
+        cities.document("BJ").collection("landmark").add(landmark1)
+
+        val landmark2 = hashMapOf("landmarkType" to "park", "name" to "parque2")
+        cities.document("BJ").collection("landmark").add(landmark2)
+
+        val landmark3 = hashMapOf("landmarkType" to "park", "name" to "parque3")
+        cities.document("BJ").collection("landmark").add(landmark3)
+
+        val landmark4 = hashMapOf("landmarkType" to "museo", "name" to "xddd")
+        cities.document("BJ").collection("landmark").add(landmark4)
+
+        val landmark6 = hashMapOf("landmarkType" to "park", "name" to "parqueDC")
+        cities.document("DC").collection("landmark").add(landmark6)
+
+        val landmark7 = hashMapOf("landmarkType" to "park", "name" to "parqueLA")
+        cities.document("LA").collection("landmark").add(landmark7)
+
+        val landmark8 = hashMapOf("landmarkType" to "park", "name" to "parqueSF")
+        cities.document("SF").collection("landmark").add(landmark8)
+
     }
 }
