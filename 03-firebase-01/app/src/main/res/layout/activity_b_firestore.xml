@@ -13,9 +13,10 @@
         android:text="Producto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintVertical_bias="0.232" />
 
     <Button
         android:id="@+id/btn_ir_restaurante"
@@ -38,4 +39,15 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_producto"
         app:layout_constraintTop_toBottomOf="@+id/btn_ir_producto" />
+
+    <Button
+        android:id="@+id/btn_ir_listaordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Lista Ordenes"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_producto"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_producto"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_ordenes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
