@@ -54,7 +54,7 @@ class COrdenes : AppCompatActivity() {
             }
 
         //buscarOrdenes()
-        //popularDatos()
+        popularDatos()
         //eliminacion()
         //eliminarDocumentoMedianteConsulta()
         //eliminarDocumentoMedianteConsulta2()
@@ -381,6 +381,18 @@ class COrdenes : AppCompatActivity() {
 
         val landmark11 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
         cities.document("BJ").collection("landmark").add(landmark11)
+
+        val landmark12 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("DC").collection("landmark").add(landmark12)
+
+        val landmark13 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("DC").collection("landmark").add(landmark13)
+
+        val landmark14 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("LA").collection("landmark").add(landmark14)
+
+        val landmark15 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("SF").collection("landmark").add(landmark15)
 
     }
 

@@ -10,7 +10,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.IdRes
-import com.example.firebase.dto.FirestoreUsuarioDto
+import com.example.proyecto2bappmov.dto.FirestoreUsuarioDto
+
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
@@ -50,6 +51,19 @@ class MainActivity : AppCompatActivity() {
                 .setOnClickListener {
                     irActividad(BFirestore::class.java)
                 }
+
+        val botonIrMapa = findViewById<Button>(R.id.btn_ir_mapa)
+        botonIrMapa
+            .setOnClickListener {
+                irActividad(MapsActivity::class.java)
+            }
+
+        val botonIrFragmento = findViewById<Button>(R.id.btn_ir_fragmento)
+        botonIrFragmento
+            .setOnClickListener {
+                irActividad(E_Fragmento::class.java)
+            }
+
     }
 
     fun pedidoIngresar(){
