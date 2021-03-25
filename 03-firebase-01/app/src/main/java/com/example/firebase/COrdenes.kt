@@ -1,19 +1,19 @@
 package com.example.firebase
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.example.firebase.dto.FirestoreRestaurantesDto
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QueryDocumentSnapshot
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import org.w3c.dom.Text
 import java.util.*
+
 
 class COrdenes : AppCompatActivity() {
 
@@ -53,8 +53,11 @@ class COrdenes : AppCompatActivity() {
                 crearOrden()
             }
 
-        buscarOrdenes()
-        //popularDatos()
+        //buscarOrdenes()
+        popularDatos()
+        //eliminacion()
+        //eliminarDocumentoMedianteConsulta()
+        //eliminarDocumentoMedianteConsulta2()
     }
 
     fun buscarOrdenes(){
@@ -245,8 +248,11 @@ class COrdenes : AppCompatActivity() {
                 }
 
         // Crear una actividad
-        // List View para mostrar las ordenes
+        // ListView para mostrar las ordenes
         // Boton para cargar mas registros
+
+
+
 
     }
 
@@ -344,6 +350,7 @@ class COrdenes : AppCompatActivity() {
         val data5 = hashMapOf("name" to "Beijing","state" to null,"country" to "China","capital" to true,"population" to 21500000,"regions" to listOf("jingjinji", "hebei"))
         cities.document("BJ").set(data5)
         */
+        /*
         val landmark1 = hashMapOf("landmarkType" to "park", "name" to "parque1")
         cities.document("BJ").collection("landmark").add(landmark1)
 
@@ -365,5 +372,119 @@ class COrdenes : AppCompatActivity() {
         val landmark8 = hashMapOf("landmarkType" to "park", "name" to "parqueSF")
         cities.document("SF").collection("landmark").add(landmark8)
 
+         */
+        val landmark9 = hashMapOf("landmarkType" to "museo", "name" to "museo1")
+        cities.document("BJ").collection("landmark").add(landmark9)
+
+        val landmark10 = hashMapOf("landmarkType" to "museo", "name" to "museo2")
+        cities.document("BJ").collection("landmark").add(landmark10)
+
+        val landmark11 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("BJ").collection("landmark").add(landmark11)
+
+        val landmark12 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("DC").collection("landmark").add(landmark12)
+
+        val landmark13 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("DC").collection("landmark").add(landmark13)
+
+        val landmark14 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("LA").collection("landmark").add(landmark14)
+
+        val landmark15 = hashMapOf("landmarkType" to "museo", "name" to "museo3")
+        cities.document("SF").collection("landmark").add(landmark15)
+
+    }
+
+    fun eliminacion(){
+        val db = Firebase.firestore
+
+        val docRef = db
+                .collection("cities")
+                .document("BJ")
+                .collection("landmark")
+                .document("CDtHIr2tZc1xPsRqMsWt")
+        /*
+        val eliminarCampo = hashMapOf<String, Any>(
+                "name" to FieldValue.delete()
+        )
+        docRef
+                .update(eliminarCampo)
+                .addOnSuccessListener {
+                    Log.i("firebase-delete", "${it}")
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-delete", "Error eliminando campo")
+                }
+
+        */
+
+        docRef
+                .delete()
+                .addOnSuccessListener {
+                    Log.i("firebase-delete", "${it}")
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-delete", "Error eliminando campo")
+                }
+    }
+
+    fun eliminarDocumentoMedianteConsulta(){
+
+        val db = Firebase.firestore
+
+        val referenciaLandmark = db.collectionGroup("landmark")
+        referenciaLandmark
+                .whereEqualTo("landmarkType", "museo")
+                .get()
+                .addOnSuccessListener {
+                    for(city in it) {
+                        Log.i("firebase-consultas", "id: ${city.id}  ${city.data}")
+                        val docRef = db
+
+                        docRef
+                                .collection("cities")
+                                .document("BJ")
+                                .collection("landmark")
+                                .document("${city.id}")
+                                .delete()
+                                .addOnSuccessListener {
+                                    Log.i("firebase-eliminacion", "Eliminado con exito")
+                                }
+                                .addOnCanceledListener {
+                                    Log.i("firebase-eliminacion", "Error eliminando")
+                                }
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-firestore", "${it}")
+                }
+
+    }
+
+    fun eliminarDocumentoMedianteConsulta2(){
+
+        val db = Firebase.firestore
+
+        val referenciaLandmark = db.collectionGroup("landmark")
+        referenciaLandmark
+                .whereEqualTo("landmarkType", "museo")
+                .get()
+                .addOnSuccessListener {
+                    for(city in it) {
+
+                        city.reference
+                                .delete()
+                                .addOnSuccessListener {
+                                    Log.i("firebase-eliminacion", "Eliminado con exito")
+                                }
+                                .addOnCanceledListener {
+                                    Log.i("firebase-eliminacion", "Error eliminando")
+                                }
+                    }
+                }
+                .addOnFailureListener {
+                    Log.i("firebase-firestore", "${it}")
+                }
     }
 }

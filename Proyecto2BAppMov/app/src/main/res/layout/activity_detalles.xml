@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".DetallesActivity">
+
+    <ImageView
+        android:id="@+id/iv_imagen_item"
+        android:layout_width="392dp"
+        android:layout_height="222dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_nombre_item"
+        android:layout_width="206dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_imagen_item" />
+
+    <TextView
+        android:id="@+id/tv_desarrolladora_item"
+        android:layout_width="157dp"
+        android:layout_height="22dp"
+        android:fontFamily="@font/montserrat"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nombre_item"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_nombre_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_item" />
+
+    <TextView
+        android:id="@+id/tv_distribuidora_item"
+        android:layout_width="161dp"
+        android:layout_height="23dp"
+        android:fontFamily="@font/montserrat"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_desarrolladora_item"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_desarrolladora_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desarrolladora_item" />
+
+    <TextView
+        android:id="@+id/tv_precio_item"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_imagen_item" />
+
+    <TextView
+        android:id="@+id/tv_descripcion_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Descripcion"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_imagen_item" />
+
+    <TextView
+        android:id="@+id/tv_descripcion_item"
+        android:layout_width="345dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fi centuries but also the leap into electronic typesetting, remaining esse unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing."
+        android:textAlignment="center"
+        android:textColor="#D1CECE"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion_set" />
+
+    <Button
+        android:id="@+id/btn_add_carrito_item"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="210dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="28dp"
+        android:text="Agregar al carrito"
+        android:textColor="#FFFFFF"
+        app:iconTint="#888887"
+        app:layout_constraintEnd_toEndOf="@+id/tv_descripcion_item"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/tv_descripcion_item"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/prim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion_item" />
+
+    <RatingBar
+        android:id="@+id/rating_detalles"
+        style="@android:style/Widget.Material.Light.RatingBar.Small"
+        android:layout_width="78dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressTint="#FFC738"
+        android:rating="4"
+        android:stepSize="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distribuidora_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="center"
+        android:id="@+id/iv_destacado"
+        android:src="@drawable/ic_launcher_background"/>
+    <TextView
+        android:id="@+id/tv_nombre_destacado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark Souls"
+        android:textSize="16dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_precio_destacado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$59.99"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+</LinearLayout>
